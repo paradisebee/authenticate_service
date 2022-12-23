@@ -185,7 +185,7 @@ fz=fz1*0.65+fz2*0.35
 #;%采样平面距离天线口面的距离为5*lambda
 r=5*lambda0
 
-
+print("here")
 
 
 fx=fx*np.exp(1j*kz_grid*r)/(4*np.pi*np.pi)
