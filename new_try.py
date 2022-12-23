@@ -192,3 +192,12 @@ fx=fx*np.exp(1j*kz_grid*r)/(4*np.pi*np.pi)
 fy=fy*np.exp(1j*kz_grid*r)/(4*np.pi*np.pi)
 fz=fz*np.exp(1j*kz_grid*r)/(4*np.pi*np.pi)
 
+
+
+def yaml_load_noncompliant():
+    import json
+    import yaml
+    response = yaml.dump({'a': 1, 'b': 2, 'c': 3})
+    # Noncompliant: uses unsafe yaml load.
+    result = yaml.load(response)
+    yaml.dump(result)
